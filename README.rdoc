@@ -1,0 +1,3 @@
+### Dorothy
+
+This is a simple proof-of-concept app inspired by Dorothy's List, Vermont Public Radio's book club for kids.
