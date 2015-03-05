@@ -1,1 +1,21 @@
-list books here
+<h1><%= @tag ? "Books Tagged '#{@tag}'" : "All Books" %></h1>
+
+<%= link_to "New Book", new_book_path, :class => 'new_book' %>
+
+<div id="sidebar">
+  Filter by Tag: <%= tag_links(Tag.all) %>
+</div>
+
+<ul id="books">
+  <% @books.each do |book| %>
+  <li>
+    <%= link_to book.title, book_path(book) %>
+    <span class='tag_list'><%= book.tag_list %></span>
+    <span class='actions'>
+      <%= edit_icon(book) %>
+      <%= delete_icon(book) %>
+    </span>
+    <%= pluralize book.comments.count, "Comment" %>
+  </li>
+  <% end %>
+</ul>

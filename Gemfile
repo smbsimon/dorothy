@@ -15,5 +15,5 @@ gem 'arel', '6.0.0.beta2'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta2'
-  gem 'spring'
+  gem 'spring', '~> 1.3.3'
 end
